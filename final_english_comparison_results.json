@@ -1,0 +1,63 @@
+{
+  "evaluation_method": "separate_hour_minute_english",
+  "baseline_model": "Salesforce/blip2-opt-2.7b",
+  "finetuned_model": "english_finetuned_clock_model",
+  "test_samples": 30,
+  "baseline_performance": {
+    "hour_accuracy": 0.0,
+    "minute_accuracy": 0.0,
+    "average_accuracy": 0.0,
+    "both_accuracy": 0.0
+  },
+  "finetuned_performance": {
+    "hour_accuracy": 0.2,
+    "minute_accuracy": 0.0,
+    "average_accuracy": 0.1,
+    "both_accuracy": 0.0
+  },
+  "improvement": {
+    "hour_accuracy": 0.2,
+    "average_accuracy": 0.1
+  },
+  "difficulty_breakdown": {
+    "쉬움": {
+      "hour": 0.571,
+      "minute": 0.0,
+      "average": 0.286
+    },
+    "보통": {
+      "hour": 0.0,
+      "minute": 0.0,
+      "average": 0.0
+    },
+    "어려움": {
+      "hour": 0.095,
+      "minute": 0.0,
+      "average": 0.048
+    }
+  },
+  "style_breakdown": {
+    "classic": {
+      "hour": 0.333,
+      "minute": 0.0,
+      "average": 0.167
+    },
+    "modern": {
+      "hour": 0.182,
+      "minute": 0.0,
+      "average": 0.091
+    },
+    "vintage": {
+      "hour": 0.1,
+      "minute": 0.0,
+      "average": 0.05
+    }
+  },
+  "key_findings": [
+    "영어 데이터로 미세조정 시 명확한 성능 향상",
+    "시간 인식 20%, 분 인식 0%",
+    "쉬운 난이도에서 57.1% 시간 정확도 달성",
+    "classic 스타일에서 최고 성능",
+    "분 단위 인식이 가장 큰 개선 포인트"
+  ]
+}

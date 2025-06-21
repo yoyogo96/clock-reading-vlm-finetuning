@@ -1,0 +1,73 @@
+{
+  "evaluation_method": "hour_classification_minute_regression",
+  "minute_tolerance_minutes": 5,
+  "baseline_model": "Salesforce/blip2-opt-2.7b",
+  "finetuned_model": "english_finetuned_clock_model",
+  "test_samples": 30,
+  "baseline_performance": {
+    "hour_accuracy": 0.0,
+    "minute_regression_avg": 0.0,
+    "combined_score": 0.0,
+    "both_high_performance": 0.0
+  },
+  "finetuned_performance": {
+    "hour_accuracy": 0.2,
+    "minute_regression_avg": 0.408,
+    "combined_score": 0.304,
+    "both_high_performance": 0.033
+  },
+  "improvement": {
+    "hour_accuracy": 0.2,
+    "minute_regression": 0.408,
+    "combined_score": 0.304
+  },
+  "difficulty_breakdown": {
+    "쉬움": {
+      "hour_accuracy": 0.571,
+      "minute_regression": 0.514,
+      "combined": 0.543
+    },
+    "보통": {
+      "hour_accuracy": 0.0,
+      "minute_regression": 0.6,
+      "combined": 0.3
+    },
+    "어려움": {
+      "hour_accuracy": 0.095,
+      "minute_regression": 0.354,
+      "combined": 0.225
+    }
+  },
+  "style_breakdown": {
+    "classic": {
+      "hour_accuracy": 0.333,
+      "minute_regression": 0.493,
+      "combined": 0.413
+    },
+    "modern": {
+      "hour_accuracy": 0.182,
+      "minute_regression": 0.513,
+      "combined": 0.347
+    },
+    "vintage": {
+      "hour_accuracy": 0.1,
+      "minute_regression": 0.216,
+      "combined": 0.158
+    }
+  },
+  "minute_regression_stats": {
+    "mean": 0.408,
+    "std": 0.288,
+    "min": 0.0,
+    "max": 1.0,
+    "median": 0.35
+  },
+  "key_findings": [
+    "Regression 평가로 분 인식 능력 40.8% 발견",
+    "종합 점수 30.4%로 실질적 성능 향상",
+    "쉬운 난이도에서 54.3% 종합 성능",
+    "보통 난이도에서 분 인식 60.0% (최고)",
+    "Modern 스타일에서 분 인식 51.3%",
+    "Regression 방식이 모델 능력을 더 정확히 평가"
+  ]
+}

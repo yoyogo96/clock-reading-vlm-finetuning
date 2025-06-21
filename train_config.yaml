@@ -1,0 +1,50 @@
+# Clock Reading VLM Training Configuration
+# 시계 읽기 VLM 학습 설정
+
+# Model Configuration
+model:
+  name: "Salesforce/blip2-opt-2.7b"
+  # 다른 옵션들:
+  # - "Salesforce/blip2-flan-t5-xl" (더 큰 모델, 더 좋은 성능)
+  # - "Salesforce/blip2-opt-6.7b" (더 큰 OPT 모델)
+
+# Data Configuration  
+data:
+  dataset_dir: "dataset"
+  batch_size: 8
+  num_workers: 4
+  reasoning_mode: true
+  max_length: 512
+
+# Training Configuration
+training:
+  num_epochs: 10
+  learning_rate: 5e-5
+  warmup_steps: 100
+  max_grad_norm: 1.0
+  weight_decay: 0.01
+  
+  # Evaluation and Saving
+  eval_steps: 500
+  save_steps: 1000
+  logging_steps: 50
+  
+  # Mixed Precision Training
+  fp16: true  # GPU가 있는 경우 활성화
+  
+# Output Configuration
+output:
+  checkpoint_dir: "checkpoints"
+  best_model_dir: "best_model"
+  logs_dir: "logs"
+
+# Wandb Configuration (선택사항)
+wandb:
+  project: "clock-reading-vlm"
+  entity: null  # 본인의 wandb 계정명으로 변경
+  enabled: false  # wandb 사용시 true로 변경
+
+# Hardware Configuration
+hardware:
+  device: "auto"  # "cuda", "cpu", 또는 "auto"
+  mixed_precision: true
