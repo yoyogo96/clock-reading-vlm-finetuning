@@ -1,0 +1,87 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyTorch
+*.pth
+*.pt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Model files and checkpoints (too large for git)
+*_model/
+*_epoch_*/
+checkpoint_*/
+checkpoints/
+checkpoints_*/
+*.safetensors
+*.bin
+
+# Generated data and results
+dataset/
+large_dataset/
+example_dataset/
+*.png
+*.jpg
+*.jpeg
+*.json
+!final_*_results.json
+!requirements.json
+!train_config.yaml
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Claude specific
+.claude/
+
+# Large files
+actual_*.png
+detailed_*.png
+evaluation_*.png
+learning_*.png
+performance_*.png
+regression_*.png
+final_*_chart.png
